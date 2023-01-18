@@ -100,6 +100,10 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })
 
+        Intent(this, MyFirebaseMessagingService::class.java).also {
+            startService(it)
+        }
+
         setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)

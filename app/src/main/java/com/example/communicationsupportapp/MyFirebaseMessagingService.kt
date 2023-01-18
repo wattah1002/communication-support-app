@@ -20,6 +20,10 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     // attach the notification created with the custom layout
     // show the notification
 
+    override fun onCreate() {
+        Log.d("MyFirebaseMessagingService", "onCreate")
+    }
+
     // [START receive_message]
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         // TODO(developer): Handle FCM messages here.
